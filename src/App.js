@@ -19,7 +19,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 1500)
+    }, 2000)
   }, [])
 
   return (
@@ -46,6 +46,7 @@ function App() {
             <Route path="/About" element={<About />} />
             <Route path="/Project" element={<Project />} />
             <Route path="/Resume" element={<Resume />} />
+            <Route path="/*" element={<Home />} />
           </Routes>
           <Footer />
         </div>
