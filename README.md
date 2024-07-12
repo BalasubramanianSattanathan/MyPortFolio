@@ -1,4 +1,4 @@
-<h2 align="center">Personal Portfolio <br/> <a target="_blank" href="">Balasubramanian S</a></h2>
+<h2 align="center"><a target="_blank" href="https://balasubramaniansattanathan.github.io/MyPortFolio/">Balasubramanian S</a></h2>
 
 <br/>
 
