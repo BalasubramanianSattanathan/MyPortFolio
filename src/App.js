@@ -11,19 +11,29 @@ import Lottie from "lottie-react";
 import nightsky from "./LottieFiles/night-sky.json";
 import HashLoader from "react-spinners/HashLoader";
 
-
 function App() {
   const [loading, setLoading] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
-    setLoading(true)
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === '') {
+      setIsDarkMode(true);
+    }
+    setLoading(true);
     setTimeout(() => {
-      setLoading(false)
-    }, 2000)
-  }, [])
+      setLoading(false);
+    }, 1500);
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDarkMode(prevMode => !prevMode);
+    const newTheme = !isDarkMode ? '' : 'light';
+    localStorage.setItem('theme', newTheme);
+  };
 
   return (
-    <>
+    <div className={isDarkMode ? '' : 'light'}>
       {loading ? (
         <div className="loader">
           <HashLoader
@@ -39,7 +49,7 @@ function App() {
           <Lottie className="bg" animationData={nightsky} loop={true} />
           <Lottie className="bgtwo" animationData={nightsky} loop={true} />
           <Lottie className="bgtemp" animationData={nightsky} loop={true} />
-          <Nav />
+          <Nav toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
           <MoveToTop />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -51,7 +61,7 @@ function App() {
           <Footer />
         </div>
       )}
-    </>
+    </div>
   );
 }
 

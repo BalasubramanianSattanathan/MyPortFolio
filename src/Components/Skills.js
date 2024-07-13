@@ -1,8 +1,8 @@
 import React from 'react';
 import { CgCPlusPlus } from "react-icons/cg";
 import { FaReact, FaGitAlt, FaGithub, FaNpm, FaFigma, FaBootstrap } from "react-icons/fa";
-import { DiNodejs, DiJavascript1 } from "react-icons/di";
-import { SiExpress, SiMongodb, SiPostman, SiVercel } from "react-icons/si";
+import { DiNodejs, DiJavascript1, DiHtml5, DiCss3 } from "react-icons/di";
+import { SiExpress, SiMongodb, SiPostman, SiVercel, SiRedux, SiMobx } from "react-icons/si";
 
 const Skills = ({ skill }) => {
   const icon = {
@@ -18,7 +18,10 @@ const Skills = ({ skill }) => {
     Npm: <FaNpm />,
     Figma: <FaFigma />,
     Bootstrap: <FaBootstrap />,
-    Vercel: <SiVercel />
+    HTML5: <DiHtml5 />,
+    CSS3: <DiCss3 />,
+    Redux: <SiRedux />,
+    Mobx: <SiMobx />,
   }
 
   return (
