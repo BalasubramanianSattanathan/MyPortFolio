@@ -62,7 +62,7 @@ const Nav = ({ toggleTheme, isDarkMode }) => {
             <div className='footerLinks'>
                 <a href="https://github.com/BalasubramanianSattanathan" target='_blank'><FaGithub /></a>
                 <a href="https://www.linkedin.com/in/balasubramanian-sattanathan/" target='_blank'><FaLinkedin /></a>
-                <a href='mailTo:balasubramanian-sattanathan@gmail.com' target='_blank'><GrMail /></a>
+                <a href='mailTo:balasubramanian.sattanathan@gmail.com' target='_blank'><GrMail /></a>
                 <a href="https://wa.me/+918870071801/?text=Hi%20Balasubramanian" target='_blank'><FaWhatsapp /></a>
             </div>
             <div onClick={toggleTheme}>
